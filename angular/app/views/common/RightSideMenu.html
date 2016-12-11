@@ -1,0 +1,28 @@
+<div id="salesMenu" class="sidenav">
+    <div class="row center salesHeader">
+        <h2>Sale</h2>
+    </div>
+    <div class="container">
+        <ul class="list-group">
+            <li class="row" data-ng-repeat="sale in sales">
+                <ul  class="container-fluid">
+                    <lh class="row list-group-item" style="border: none">{{ sale.timeStamp}}</lh>
+                    <li class="row list-group-item" style="border: none">Cost Price: {{ '$' + sale.costPrice }}</li>
+                    <li class="row list-group-item" style="border: none">Procurement Fee: {{ '$' + sale.ProcurementFee }}</li>
+                    <li class="row list-group-item" style="border: none">Sub Total: {{ '$' + sale.subTotal }}</li>
+                    <li class="row list-group-item" style="border: none">StampDuty: {{ '$' + sale.stampDuty }}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr/>
+    <div class="total">
+        <div>
+            total: ${{total}}
+        </div>
+
+        <div class="rightAlignment">
+            <button type="button" class="btn btn-default" ng-click="deleteSale()"> delete </button>
+        </div>
+    </div>
+</div>

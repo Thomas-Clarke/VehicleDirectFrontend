@@ -1,0 +1,75 @@
+<div>
+    <h2>Dealerships</h2>
+    <div class="container-fluid">
+        <form class="form-horizontal col-lg-12 col-md-12 dataAccess">
+            <div class="formPersonalDetails form-group">
+                <label>
+                    <span>Name:</span>
+                    <input class="form-control" type="text" ng-model="FirstName" placeholder="Enter Text Here.."/>
+                </label>
+                <br/>
+                <label>
+                    Phone Number:
+                    <input class="form-control" type="text" ng-model="PhoneNumber" placeholder="Enter Text Here.."/>
+                </label>
+                <br/>
+                <label>
+                    Email:
+                    <input class="form-control" type="text" ng-model="Email" placeholder="Enter Text Here.."/>
+                </label>
+            </div>
+            <div class="addressSection formSection col-lg-12a">
+                <h3>Address</h3>
+                <label>
+                    Street No: <br/>
+                    <input class="form-control" type="text" ng-model="HouseNo" placeholder="Enter Text Here.."/>
+                </label>
+                <label>
+                    Street: <br/>
+                    <input class="form-control" type="text" ng-model="StreetName" placeholder="Enter Text Here.."/>
+                </label>
+                <label>
+                    Suburb: <br/>
+                    <input class="form-control" type="text" ng-model="Suburb" placeholder="Enter Text Here.."/>
+                </label>
+                <label>
+                    State: <br/>
+                    <input class="form-control" type="text" ng-model="State" placeholder="Enter Text Here.."/>
+                </label>
+                <label>
+                    Postcode: <br/>
+                    <input class="form-control" type="text" ng-model="PostCode" placeholder="Enter Text Here.."/>
+                </label>
+            </div>
+            <div class="formSection comments col-lg-12" data-ng-controller="CommentCtrl">
+                <h3>Comments</h3>
+                <!-- comments section to do -->
+                <div data-ng-repeat="comment in comments">
+                    <div class="comment">
+                        <div class="commentHeader">
+                            {{comment.timestamp}}
+                        </div>
+                        <div class="commentContent">
+                            {{comment.content}}
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <textarea class="form-control commentTextArea" ng-model="newComment"></textarea>
+                </div>
+
+                <div class="commentLowerBar">
+                    <button type="button" ng-click="addComment(newComment)" class="btn btn-success">Comment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class ="col-lg-12">
+        <div class="lowerRightHandSideButtonContainer">
+            <!-- $root.rightSidebar = !$root.rightSidebar -->
+            <button ng-click="addSale('Dealerships', 50, 10, 12)"
+                    type="button" class="btn btn-success lowerRightHandSideButton">Add to Sale</button>
+        </div>
+    </div>
+</div>

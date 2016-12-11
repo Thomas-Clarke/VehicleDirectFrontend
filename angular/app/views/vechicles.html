@@ -1,0 +1,21 @@
+<div>
+    <H2>Vehicles</H2>
+    <div class="container-fluid vehicles" data-ng-controller="VechileCtrl">
+        <div class="row repeat" data-ng-repeat="vechicle in avaliableList">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul>
+                    <li>Type: {{vechicle.type}}</li>
+                    <li>Make: {{vechicle.make}}</li>
+                    <li>Model: {{vechicle.model}}</li>
+                    <li>Year: {{vechicle.year}}</li>
+                    <li>Colour: {{vechicle.color}}</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <!--lowerRightHandSideButtonContainer $root.rightSidebar = !$root.rightSidebar -->
+                <button ng-click="addSale('Vechicle', 50, 10, 12)"
+                        type="button" class="btn btn-success">Add to Sale</button>
+            </div>
+        </div>
+    </div>
+</div>

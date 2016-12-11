@@ -1,0 +1,32 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <div ng-include="'views/common/navigation.html'"></div>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+        <!-- Page wrapper -->
+        <div ng-include="'views/common/topnavbar.html'"></div>
+
+            <div data-ng-controller="salesCtrl" class="flexContainerLeftToRight">
+                <!-- Main view-->
+                <div class="mainFlexContainer" ui-view></div>
+
+                <!-- Right Side Menu -->
+                <div ng-include="'views/common/RightSideMenu.html'"></div>
+            </div>
+
+            <!-- Footer -->
+            <div ng-include="'views/common/footer.html'"></div>
+
+    </div>
+    <!-- End page wrapper-->
+
+    <!-- Right Sidebar -->
+    <div ng-include="'views/common/right_sidebar.html'"></div>
+
+</div>
+<!-- End wrapper-->

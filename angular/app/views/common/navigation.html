@@ -1,0 +1,68 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element center" uib-dropdown>
+                    <img alt="image" class="img-circle" src="img/profile_small.jpg"/>
+                    <a uib-dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">David Williams</strong>
+                             </span>
+                                <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated fadeInRight m-t-xs">
+                        <li><a ui-sref="app.profile">Profile</a></li>
+                        <li><a ui-sref="app.contacts">Contacts</a></li>
+                        <li><a ui-sref="mailbox.inbox">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="login">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <li ng-class="{active: $state.includes('dashboards')}">
+                <a ui-sref="dashboards.dashboard_1"><i class="fa fa-home"></i> <span class="nav-label">{{ 'Home' | translate }}</span></a>
+            </li>
+            <li ng-class="{active: $state.includes('financeConsultants')}">
+                <a ui-sref="financeConsultants.financeConsultants"><i class="fa fa-money"></i> <span class="nav-label">{{ 'Finance Consultants' | translate }}</span></a>
+            </li>
+
+            <li  ng-class="{active: $state.includes('customers')}">
+                <a ui-sref="customers.customers_1"><i class="fa fa-user"></i><span class="nav-label">{{ 'Customers' | translate }}</span></a>
+            </li>
+
+            <li ng-class="{active: $state.includes('dealership')}">
+                <a ui-sref="dealership.dealerships"><i class="fa fa-users"></i><span class="nav-label">{{ 'Dealerships' | translate }}</span></a>
+            </li>
+
+            <li ng-class="{active: $state.includes('vehicles')}">
+                <a ui-sref="vehicles.vehicles"><i class="fa fa-car"></i><span class="nav-label">{{ 'Vehicles' | translate }}</span></a>
+            </li>
+
+            <li  ng-class="{active: $state.includes('analytics')}">
+                <a ui-sref="analytics.dashboard_2"><i class="fa fa-bar-chart"></i> <span class="nav-label">{{ 'Analytics' | translate }}</span></a>
+            </li>
+
+            <li ng-class="{active: $state.includes('mailbox')}">
+                <a ui-sref="inbox"><i class="fa fa-envelope"></i> <span class="nav-label">{{ 'MAILBOX' | translate }} </span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" ng-class="{in: $state.includes('mailbox')}">
+                    <li ui-sref-active="active"><a ui-sref="mailbox.inbox">Inbox</a></li>
+                    <li ui-sref-active="active"><a ui-sref="mailbox.email_view">Email view</a></li>
+                    <li ui-sref-active="active"><a ui-sref="mailbox.email_compose">Compose email</a></li>
+                    <li ui-sref-active="active"><a ui-sref="mailbox.email_template">Email template</a></li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('settings.settings_1')}">
+                <a ui-sref="settings.settings_1"><i class="fa fa-cog"></i><span class="nav-label">{{ 'Settings' | translate }}</span></a>
+            </li>
+            
+        </ul>
+
+    </div>
+</nav>
